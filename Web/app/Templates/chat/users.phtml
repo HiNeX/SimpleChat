@@ -1,0 +1,28 @@
+	<section>
+		<div class="content">
+			<div class="dashboard">
+				<div class="tabs">
+					<ul>
+						<li><a href="<?=$this->route->url(['chat', 'index'])?>"><?=$this->t->get('Chats')?></a></li>
+						<li><a class="active" href="<?=$this->route->url(['chat', 'users'])?>"><?=$this->t->get('Users')?></a></li>
+						<li><a href="<?=$this->route->url(['chat', 'settings'])?>"><?=$this->t->get('Settings')?></a></li>
+						<li><a class="exit" href="<?=$this->route->url(['chat', 'exit'])?>"><?=$this->t->get('Exit')?></a></li>
+					</ul>
+				</div>
+				<div class="container">
+					<div class="users">
+						<div class="results">
+							<ul>
+						<?php $last = $users=$this->get('last'); ?>
+						<?php if($users=$this->get('users')): ?>
+							<?php foreach($users as $user): ?>
+								<li><a href="<?=$this->route->url(['chat', 'createroom', ['id' => $user['id']]])?>"><span class="<?=(strtotime($user['online']) >= $last)?'online':'offline' ?>"></span> <?=$user['nickname']?></a></li>
+							<?php endforeach; ?>
+						<?php endif; ?>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>

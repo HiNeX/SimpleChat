@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title><?=$this->getTitle()?></title>
+<!--	<link rel="stylesheet" href="/media/css/loader.css" />-->
+	<link rel="stylesheet" href="/media/css/media.css" />
+	<link rel="stylesheet" href="/media/css/animate.css" />
+	<link rel="stylesheet" href="/media/css/buttons.css" />
+	<?=$this->getCSS()?>
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<header>
+		<h1><a href="/">WebSite!</a></h1>
+	</header>
+
+	<?=$this->getContent()?>
+
+	<footer>
+		<div class="copyright">
+			&copy; <a href="http://hinex.org">Roman Hinex</a>
+		</div>
+		<div class="language">
+			<?=$this->t->get('Change language')?>:
+			<a href="<?=$this->route->url(['index', 'language', ['return' => $_SERVER['REQUEST_URI']]])?>">
+				<?php if($this->t->getLanguage() === 'english') echo'Russian'; else echo 'English';?>
+			</a>
+		</div>
+	</footer>
+
+	<div class="override"></div>
+	<!--<div class="loader"><div class="timer"></div></div>-->
+<?=$this->getJS()?>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript" src="/media/js/jquery.noty.packaged.min.js"></script>
+<?php if ($message = $this->get('message')): ?>
+<script type="text/javascript">
+	$(window).ready(function(){
+		var n = noty({
+			layout: 'topRight',
+			text: '<?=$message['text']?>',
+			type: '<?=$message['type']?>',
+			animation: {
+				open: 'animated fadeInDownBig', // Animate.css class names
+				close: 'animated fadeOut', // Animate.css class names
+				easing: 'swing', // unavailable - no need
+				speed: 500 // unavailable - no need
+			}
+		});
+	});
+</script>
+<?php endif; ?>
+</body>
+</html>

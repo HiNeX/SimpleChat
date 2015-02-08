@@ -1,0 +1,18 @@
+	<section>
+		<div class="content">
+			<div class="sign">
+				<form action="<?=$this->route->url(['index', 'index'])?>" method="POST">
+					<div class="input-group">
+						<input type="text" name="nickname" pattern="[a-zA-Z0-9]+" placeholder="<?=$this->t->get('Nickname')?>" required="" />
+						<input type="password" name="password" placeholder="<?=$this->t->get('Password')?>" required="" />
+					</div>
+					<div class="submit-group">
+						<input type="submit" name="signin" id="signin" value="<?=$this->t->get('Sign In')?>" />
+						<input type="submit" name="signup" id="signup" value="<?=$this->t->get('Sign Up')?>" />
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="override"></div>
+		<div class="loader"><div class="timer"></div></div>
+	</section>

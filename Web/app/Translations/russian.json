@@ -1,0 +1,23 @@
+{
+  "Change language": "Сменить язык",
+  "Nickname": "Никнейм",
+  "Password": "Пароль",
+  "Sign In": "Войти",
+  "Sign Up": "Зарегистрироваться",
+  "Chats": "Чаты",
+  "Users": "Пользователи",
+  "Settings": "Настройки",
+  "Exit": "Выход",
+  "No active dialogs": "Нет активных диалогов",
+  "Old password": "Старый пароль",
+  "New password": "Новый пароль",
+  "Are you sure you want to exit?": "Вы действительно хотите выйти?",
+  "Yes": "Да",
+  "Send": "Отправить",
+  "Apply": "Принять",
+  "Login failed": "Ошибка входа",
+  "Nickname exist": "Никнейм существует",
+  "Password success changed": "Пароль успешно изменен",
+  "Invalid old password": "Неверный пароль",
+  "Message send": "Сообщение отправленно"
+}

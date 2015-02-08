@@ -1,0 +1,408 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: #4b375e url('../img/home.jpg') center no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+	font-size: 11pt;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+textarea, input {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	transition: 400ms;
+}
+
+section a,
+section a:visited {
+	color: #333;
+}
+
+section a:hover {
+	color: #555;
+}
+
+header {
+	position: absolute;
+	z-index: 2;
+}
+
+header h1 {
+	font-family: 'Lobster', cursive;
+	font-weight: 400;
+	text-shadow: 0 1px 3px #000;
+	line-height: 50px;
+	margin-left: 15px;
+}
+
+header h1 a {
+	color: #fff;
+}
+
+section,
+div.override {
+	padding: 50px;
+	top: 0;
+	bottom:0;
+	right: 0;
+	left: 0;
+}
+
+div.override {
+	position: fixed;
+	z-index: -1;
+	background: rgba(0,0,0,0.5);
+}
+
+section div.sign {
+	border-radius: 5px;
+	box-shadow: 0 2px 15px rgba(0,0,0,0.4);
+	overflow: hidden;
+	z-index: 1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -60px;
+	margin-left: -190px;
+	height: 120px;
+	width: 380px;
+}
+
+section div.sign input {
+	font-weight: 300;
+	font-size: 12pt;
+	outline: 0;
+	border: 0;
+	line-height: 40px;
+	padding: 0 15px;
+	width: 380px;
+}
+
+section div.sign input[type="submit"] {
+	width: 190px;
+	float:left;
+}
+
+section div.sign div.submit-group input {
+	color: #fff;
+}
+
+section div.sign input#signin {
+	background: rgb(47, 24, 35);
+}
+
+section div.sign input#signup {
+	background: rgb(74, 59, 44);
+}
+
+section div.dashboard {
+	border-radius: 5px;
+	box-shadow: 0 2px 15px rgba(0,0,0,0.4);
+	overflow: hidden;
+	z-index: 1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -250px;
+	margin-left: -450px;
+	height: 500px;
+	width: 900px;
+}
+
+section div.dashboard div.tabs {
+	background: rgb(47, 24, 35);
+	overflow: hidden;
+}
+
+section div.dashboard div.tabs ul {
+	list-style-type: none;
+}
+
+section div.dashboard div.tabs ul li {
+	width: 25%;
+	border-bottom: 2px solid rgb(47, 24, 35);
+	float:left;
+}
+
+section div.dashboard div.tabs ul li a {
+	font-size: 15pt;
+	color: rgb(47, 24, 35);
+	background: #eee;
+	font-weight: 300;
+	line-height: 50px;
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+section div.dashboard div.tabs ul li a.active {
+	background: rgb(47, 24, 35);
+	color: #fff;
+}
+
+section div.dashboard div.container {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+}
+
+section div.dashboard div.container div.sidebar {
+	text-align: center;
+	width: 25%;
+	float: left;
+	background: rgb(47, 24, 35);
+	color: #fff;
+}
+
+section div.dashboard div.container ul {
+	list-style-type: none;
+	text-align: left;
+}
+
+section div.dashboard div.container ul li span {
+	position: relative;
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	border-radius: 10px;
+	margin: 0 3px 0 3px;
+}
+
+section div.dashboard div.container ul li span.online {
+	background: #9ed909;
+}
+
+section div.dashboard div.container ul li span.offline {
+	background: #d81d00;
+}
+
+section div.dashboard div.container ul li a {
+	display: block;
+	line-height: 22px;
+	padding: 0 5px 0 5px;
+}
+
+section div.dashboard div.container ul li a.new {
+	font-weight: 600;
+}
+
+section div.dashboard div.container div.sidebar ul li a {
+	color: #fff;
+}
+
+section div.dashboard div.container div.sidebar ul li a.active {
+	background: #4F293B;
+}
+
+section div.dashboard div.container div.area {
+	overflow: hidden;
+	background: #fff;
+	height: 448px;
+}
+
+section div.dashboard div.container div.area div.messages {
+	padding: 10px;
+	height: 330px;
+}
+
+section div.dashboard div.container div.area div.all div {
+	height: auto;
+}
+
+section div.dashboard div.container div.area div.all {
+	width: 100%;
+	max-height: 330px;
+	display: table;
+}
+
+section div.dashboard div.container div.area div.list {
+	display: table-cell;
+	vertical-align: bottom;
+}
+
+section div.dashboard div.container div.area span.content {
+	position: relative;
+	padding: 10px;
+	margin-bottom: 20px;
+	display: block;
+	border-radius: 5px;
+}
+
+section div.dashboard div.container div.area span.content:after {
+	position: absolute;
+	bottom: -15px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	content: ' ';
+}
+
+section div.dashboard div.container div.area span.content i {
+	display: block;
+	font-weight: 600;
+	margin-top: 10px;
+	font-size: 8pt;
+	color: #a098a0;
+}
+
+section div.dashboard div.container div.area .me span.content {
+	margin-right: 20px;
+	background: #dadbff;
+}
+
+section div.dashboard div.container div.area .me span.content:after {
+	border-width: 15px 15px 0 0;
+	border-color: #dadbff transparent transparent transparent;
+	left: 10px;
+}
+
+section div.dashboard div.container div.area .me span.content i {
+	text-align: right;
+}
+
+section div.dashboard div.container div.area .you span.content {
+	margin-left: 20px;
+	background: #EDDBB4;
+}
+
+section div.dashboard div.container div.area .you span.content:after {
+	border-width: 15px 0 0 15px;
+	border-color: #EDDBB4 transparent transparent transparent;
+	right: 10px;
+}
+
+section div.dashboard div.container div.area div.send {
+	overflow: hidden;
+	border-top: 2px solid rgb(74, 59, 44);
+	height: 96px;
+}
+
+section div.dashboard div.container div.area div.send textarea {
+	display: inline-block;
+	outline: none;
+	height: 96px;
+	width: 80%;
+	resize: none;
+	font-size: 11pt;
+	border: 0;
+	padding: 10px;
+}
+
+section div.dashboard div.container div.area div.send input {
+	display: inline-block;
+	width: 20%;
+	float: right;
+	height: 96px;
+	text-align: center;
+	border: 0;
+	background: rgb(74, 59, 44);
+	font-size: 13pt;
+	color: #fff;
+}
+
+section div.dashboard div.container div {
+	height: 450px;
+	overflow: auto;
+}
+
+section div.dashboard div.container div.users {
+	overflow: hidden;
+	background: #fff;
+}
+
+section div.dashboard div.container div.users form {
+	display: block;
+	overflow: hidden;
+	border-bottom: 2px solid rgb(74, 59, 44);
+}
+
+section div.dashboard div.container div.users form input {
+	border: 0;
+	line-height: 40px;
+	outline: 0;
+	float: left;
+	padding: 0 10px;
+	font-size: 11pt;
+}
+
+section div.dashboard div.container div.users form input[type="text"] {
+	width: 75%;
+}
+
+section div.dashboard div.container div.users form input[type="submit"] {
+	background: rgb(74, 59, 44);
+	width: 25%;
+	color: #fff;
+}
+
+section div.dashboard div.container div.users div.results {
+	/*height: 408px;*/
+	height: 448px;
+}
+
+section div.dashboard div.container div.settings {
+	overflow: hidden;
+	background: #fff;
+}
+
+section div.dashboard div.container div.settings form {
+	width: 400px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+
+section div.dashboard div.container div.settings input {
+	line-height: 30px;
+	padding: 5px;
+	height: 30px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+section div.dashboard div.container div.settings input[type="submit"] {
+	border: 0;
+	background: #4f293b;
+	padding: 0;
+	color: #fff;
+}
+
+footer {
+	z-index: 2;
+	background: rgba(0, 0, 0, 0.3);
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #fff;
+}
+
+footer div {
+	font-size: 10pt;
+	line-height: 50px;
+}
+
+footer div.copyright {
+	padding-left: 15px;
+	float: left;
+}
+
+footer div.language {
+	padding-right: 15px;
+	float: right;
+}
+
+footer a {
+	text-decoration: underline;
+	color: #fff;
+}

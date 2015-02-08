@@ -1,0 +1,23 @@
+{
+  "Change language": "Change language",
+  "Nickname": "Nickname",
+  "Password": "Password",
+  "Sign In": "Sign In",
+  "Sign Up": "Sign Up",
+  "Chats": "Chats",
+  "Users": "Users",
+  "Settings": "Settings",
+  "Exit": "Exit",
+  "No active dialogs": "No active dialogs",
+  "Old password": "Old password",
+  "New password": "New password",
+  "Are you sure you want to exit?": "Are you sure you want to exit?",
+  "Yes": "Yes",
+  "Send": "Send",
+  "Apply": "Apply",
+  "Login failed": "Login failed",
+  "Nickname exist": "Nickname exist",
+  "Password success changed": "Password success changed",
+  "Invalid old password": "Invalid old password",
+  "Message send": "Message send"
+}

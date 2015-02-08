@@ -1,0 +1,22 @@
+	<section>
+		<div class="content">
+			<div class="dashboard">
+				<div class="tabs">
+					<ul>
+						<li><a href="<?=$this->route->url(['chat', 'index'])?>"><?=$this->t->get('Chats')?></a></li>
+						<li><a href="<?=$this->route->url(['chat', 'users'])?>"><?=$this->t->get('Users')?></a></li>
+						<li><a href="<?=$this->route->url(['chat', 'settings'])?>"><?=$this->t->get('Settings')?></a></li>
+						<li><a class="active exit" href="<?=$this->route->url(['chat', 'exit'])?>"><?=$this->t->get('Exit')?></a></li>
+					</ul>
+				</div>
+				<div class="container">
+					<div class="settings">
+						<form action="<?=$this->route->url(['chat', 'exit'])?>" method="post">
+							<span><?=$this->t->get('Are you sure you want to exit?')?></span>
+							<input type="submit" name="exit" value="<?=$this->t->get('Yes')?>" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>

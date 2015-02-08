@@ -1,0 +1,24 @@
+	<section>
+		<div class="content">
+			<div class="dashboard">
+				<div class="tabs">
+					<ul>
+						<li><a href="<?=$this->route->url(['chat', 'index'])?>"><?=$this->t->get('Chats')?></a></li>
+						<li><a href="<?=$this->route->url(['chat', 'users'])?>"><?=$this->t->get('Users')?></a></li>
+						<li><a class="active" href="<?=$this->route->url(['chat', 'settings'])?>"><?=$this->t->get('Settings')?></a></li>
+						<li><a class="exit" href="<?=$this->route->url(['chat', 'exit'])?>"><?=$this->t->get('Exit')?></a></li>
+					</ul>
+				</div>
+				<div class="container">
+					<div class="settings">
+						<form action="<?=$this->route->url(['chat', 'settings']) ?>" method="post">
+							<input type="text" name="nickname" pattern="[a-zA-Z0-9]+" value="<?=$this->get('nickname')?>" placeholder="<?=$this->t->get('Nickname')?>" />
+							<input type="password" name="password_old" placeholder="<?=$this->t->get('Old password')?>" />
+							<input type="password" name="password_new" placeholder="<?=$this->t->get('New password')?>" />
+							<input type="submit" value="<?=$this->t->get('Apply')?>" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>

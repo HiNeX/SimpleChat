@@ -1,0 +1,51 @@
+	<section>
+		<div class="content">
+			<div class="dashboard">
+				<div class="tabs">
+					<ul>
+						<li><a class="active" href="<?=$this->route->url(['chat', 'index'])?>"><?=$this->t->get('Chats')?></a></li>
+						<li><a href="<?=$this->route->url(['chat', 'users'])?>"><?=$this->t->get('Users')?></a></li>
+						<li><a href="<?=$this->route->url(['chat', 'settings'])?>"><?=$this->t->get('Settings')?></a></li>
+						<li><a class="exit" href="<?=$this->route->url(['chat', 'exit'])?>"><?=$this->t->get('Exit')?></a></li>
+					</ul>
+				</div>
+				<div class="container">
+					<div class="sidebar">
+						<?php if ($dialogs = $this->get('dialogs')): ?>
+						<ul>
+							<?php foreach ($dialogs as $dialog): ?>
+							<li><a class="<?=($dialog['new'])?'new ':'' ?><?=($dialog['active'])?'active':'' ?>" href="<?=$this->route->url(['chat', 'index', ['id' => $dialog['id']]])?>"><span class="<?=($dialog['online'])?'online':'offline' ?>"></span> <?=$dialog['nickname']?> <?=($dialog['new'])?'(+'.$dialog['new'].')':'' ?></a></li>
+							<?php endforeach; ?>
+						</ul>
+						<?php else: ?>
+						<span id="empty"><?=$this->t->get('No active dialogs')?></span>
+						<?php endif; ?>
+					</div>
+					<div class="area">
+						<?php if ($dialog = $this->get('dialog')): ?>
+						<div class="messages" id="messages">
+							<div class="all">
+								<div class="list">
+									<?php foreach($dialog['messages'] as $message): ?>
+									<p class="<?=($dialog['id'] == $message['dialog_id'])?'me':'you'?>">
+										<span class="content">
+											<?=$message['message']?>
+										<i><?=$message['time']?></i>
+										</span>
+									</p>
+									<?php endforeach; ?>
+								</div>
+							</div>
+						</div>
+						<div class="send">
+							<form action="<?=$this->route->url(['chat', 'index', ['id' => $dialog['id']]])?>" method="POST">
+								<textarea name="message" id="" cols="30" rows="10"></textarea>
+								<input type="submit" value="<?=$this->t->get('Send')?>" />
+							</form>
+						</div>
+						<?php endif; ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
